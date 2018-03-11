@@ -1,5 +1,7 @@
 package com.example.demo.config;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.elasticsearch.client.transport.TransportClient;
 import org.elasticsearch.common.settings.Settings;
 import org.elasticsearch.common.transport.InetSocketTransportAddress;
@@ -15,6 +17,8 @@ import java.net.UnknownHostException;
  */
 @Configuration
 public class ElasticConfig {
+
+    private static Logger LOG  = LogManager.getLogger();
 
     @Bean
     public TransportClient client() throws UnknownHostException {

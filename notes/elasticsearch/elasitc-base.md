@@ -1,3 +1,7 @@
+##Elasticsearch基础知识
+
+[Elasticsearch官网](https://www.elastic.co)
+
 ###1.集群和节点
 
 ###2.索引、类型、文档

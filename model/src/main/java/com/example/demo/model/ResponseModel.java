@@ -6,8 +6,14 @@ package com.example.demo.model;
 public class ResponseModel {
 
     private int code;
-    private String name;
+    private String message;
     private Object data;
+
+    public ResponseModel(int code, String message, Object data) {
+        this.code = code;
+        this.message = message;
+        this.data = data;
+    }
 
     public int getCode() {
         return code;
@@ -17,12 +23,12 @@ public class ResponseModel {
         this.code = code;
     }
 
-    public String getName() {
-        return name;
+    public String getMessage() {
+        return message;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setMessage(String message) {
+        this.message = message;
     }
 
     public Object getData() {
