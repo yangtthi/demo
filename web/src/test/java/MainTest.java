@@ -2,10 +2,7 @@ import com.alibaba.fastjson.JSON;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 
 /**
@@ -25,6 +22,21 @@ public class MainTest {
         merchantIds.get(1L).add(2L);
         log.info(JSON.toJSONString(merchantIds));
         log.info("****"+String.valueOf(Integer.valueOf("22341237")*100));
+
+
+        List<Long> allMids = new ArrayList<>();
+
+        Long count = 0L;
+        for(int i=0;i<100;i++){
+            allMids.add(count+=2);
+        }
+        List<Long> containsMid = new ArrayList<>();
+        count = 0L;
+        for(int i=0;i<100;i++){
+            containsMid.add(count+=4);
+        }
+        allMids.removeAll(containsMid);
+        System.out.println(allMids.size());
 
     }
 }
